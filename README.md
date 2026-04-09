@@ -2,13 +2,16 @@
 
 > Para que hablemos el mismo idioma, así es como se mueve nuestro día a día y las entidades que el sistema tiene que manejar:
 
-### El Estudio (Nosotros - Administradores):
+### Usuarios y contexto en el panel:
 
-Somos los que creamos los perfiles, subimos el material y armamos los números. Necesitamos tener el control total de qué ve cada persona.
+El sistema de usuarios es **genérico**: todos acceden con el mismo tipo de cuenta (por ejemplo email y contraseña), sin fijar de antemano un “tipo de usuario” rígido en el registro.
 
-### El Cliente (El Usuario Final):
+**Dentro del panel del sitio** el usuario puede **cambiar de contexto** entre modo **Cliente** y modo **Trabajador**. Lo que se muestra y qué acciones están permitidas dependen del modo activo en ese momento (selector, interruptor o equivalente en la interfaz).
 
-Las marcas o personas que nos contratan. Tienen que poder entrar con un email y contraseña a su propio espacio privado. Un cliente no puede, bajo ninguna circunstancia, ver el contenido o las tarifas de otro.
+- **Modo Trabajador:** corresponde a quien opera el estudio: crear perfiles, subir material, armar los números y tener el control operativo de qué ve cada persona en los proyectos.
+- **Modo Cliente:** corresponde a las marcas o personas que nos contratan: su espacio privado; en este modo no puede, bajo ninguna circunstancia, ver el contenido o las tarifas de otro cliente.
+
+Así el mismo usuario puede pasar de un contexto a otro sin depender de cuentas separadas “de administrador” y “de cliente” a nivel de sistema.
 
 ### El Proyecto / Campaña:
 
@@ -27,7 +30,7 @@ Son los archivos finales. Necesito que se dividan en dos estados:
 
 ### El flujo ideal:
 
-El cliente entra, ve un dashboard de bienvenida que le dice "Hola, Marca X", revisa la propuesta económica que le armamos, la aprueba con un botón, y una vez terminado nuestro trabajo, entra a ese mismo portal a descargar sus fotos y diseños.
+El usuario entra al panel, elige el contexto **Cliente** cuando corresponde, ve un dashboard de bienvenida que le dice "Hola, Marca X", revisa la propuesta económica que le armamos, la aprueba con un botón, y una vez terminado nuestro trabajo, entra a ese mismo portal a descargar sus fotos y diseños. Quien opera el estudio usa el contexto **Trabajador** para gestionar proyectos, materiales y visibilidad.
 
 ---
 
@@ -54,4 +57,4 @@ Piensen en una mezcla entre Notion (por lo limpio y estructurado) y Behance (por
 
 - Las fotos se tienen que ver en una grilla tipo Masonry (como Pinterest), para que se acomoden solas sin importar si son verticales u horizontales.
 - Uso de Cards (tarjetas) con bordes ligeramente redondeados y sombras muy suaves para separar los distintos proyectos.
-- Menú de navegación lateral colapsable, para que la pantalla quede al 100% para el contenido del cliente.
+- Menú de navegación lateral colapsable, para que la pantalla quede al 100% para el contenido según el modo activo (Cliente o Trabajador).
