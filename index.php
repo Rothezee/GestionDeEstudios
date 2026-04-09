@@ -1,39 +1,35 @@
-<?php
-session_start();
-if (isset($_SESSION['user'])) {
-    header('Location: src/dashboard.php');
-    exit;
-}
-?>
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/styles.css" />
     <title>Gestudy</title>
   </head>
-  <body>
-    <nav>
-        <h1>Gestudy. Tu Centro De Estudios</h1>
-    </nav>
-    <div class="login_card">
-      <form method="post" action="">
-        <h2>Inicio de Sesión</h2>
-        <label class="login_label" for="email"> eMail</label>
-        <div class="login_fields">
-          <input class="login_input" id="email" name="email" type="email" />
-        </div>
-        <label class="login_label" for="password">Contraseña</label>
-        <div class="login_fields">
-          <input class="login_input" id="password" name="password" type="password" />
-        </div>
-        
-        <div class="login_fields">
-            <input class="login_button" type="submit" value="Entrar">
-        </div>
-      </form>
-      <a id="password_recover">¿Olvido su contraseña?</a>
+  <body style="display: flex; align-items: center; justify-content: center">
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form" method="POST">
+          <h2><i class="fas fa-lock"></i> Registro</h2>
+          <input type="text" placeholder="Nombre *" required />
+          <input type="text" placeholder="Usuario *" required />
+          <input type="email" placeholder="Email *" required />
+          <input type="password" placeholder="Contraseña *" required />
+          <button type="submit">Registrarse</button>
+          <p class="message">Ya registrado? <a href="#">Iniciar sesión</a></p>
+        </form>
+        <form class="login-form" method="post">
+          <h2><i class="fas fa-lock"></i> Inicio de Sesión</h2>
+          <input type="text" placeholder="Usuario o Correo" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button type="submit" name="send2">Iniciar Sesión</button>
+          <p class="message">
+            No registrado? <a href="#">Crear cuenta </a>
+          </p>
+        </form>
+      </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Script/login.js"></script>
   </body>
 </html>
